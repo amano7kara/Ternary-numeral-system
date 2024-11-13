@@ -1,0 +1,30 @@
+#以下に、Pythonでの基本的なsetun三進法プログラムの例を示します：
+
+#python
+
+def setun_convert(decimal_num):
+    digits = []
+    
+    # まず、10進数を3進数に変換します
+    while decimal_num > 0:
+        remainder = decimal_num % 3
+        digits.append(remainder)
+        decimal_num = decimal_num // 3
+    
+    # 3進数の桁を逆順にして結果を生成します
+    setun_num = ''.join(str(digit) for digit in digits[::-1])
+    
+    return setun_num
+
+# 10進数を入力して、3進数に変換します
+decimal_input = int(input("10進数を入力してください: "))
+setun_output = setun_convert(decimal_input)
+
+print(f"セトゥン表現: {setun_output}")
+
+
+#このプログラムでは、`setun_convert`という関数を定義しています。この関数は、与えられた10進数を3進数に変換し、セトゥン表現として返します。そして、ユーザーに10進数の入力を求め、その入力を`setun_convert`関数に渡して、結果を表示します。
+
+#この例を実行すると、10進数の入力を求められるので、任意の値を入力してください。すると、その値のセトゥン表現が表示されます。
+
+#もちろん、上記のプログラムは基本的な例であり、より高度な機能やエラーハンドリングなど、実際のアプリケーションには必要な追加要素があるかもしれません。ただし、上記のコードを参考にしてsetun三進法プログラムをPythonで実装することができるはずです。
